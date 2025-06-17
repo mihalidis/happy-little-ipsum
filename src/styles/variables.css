@@ -1,0 +1,21 @@
+:root {
+  --color-sap-green: #6B8E23;
+  --color-sky-blue: #87CEEB;
+  --color-earth-brown: #8B4513;
+  --color-brush-white: #fefefe;
+
+  --color-sunrise-1: #FFE5B4;  /* Light Peach */
+  --color-sunrise-2: #FFDAB9;  /* Light Salmon */
+  --color-sunrise-3: #FFC0CB;  /* Light Pink */
+  --color-sunrise-4: #FFB6C1;  /* Light Pink */
+  --color-sunrise-5: #FFA07A;  /* Light Salmon */
+
+  --gradient-sunrise: linear-gradient(
+    135deg,
+    var(--color-sunrise-1),
+    var(--color-sunrise-2),
+    var(--color-sunrise-3),
+    var(--color-sunrise-4),
+    var(--color-sunrise-5)
+  );
+} 
