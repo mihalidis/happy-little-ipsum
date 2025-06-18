@@ -1,0 +1,38 @@
+.quoteCard {
+  max-width: 340px;
+  background: var(---color-sap-green);
+  border-radius: 14px;
+  padding: 20px;
+  margin: 32px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.quoteText {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--color-earth-brown);
+  font-family: 'Lora', serif;
+  line-height: 1.4;
+}
+
+.quoteAuthor {
+  font-size: 1rem;
+  color: var(--color-earth-brown);
+  font-family: 'Lora', serif;
+  font-style: italic;
+  text-align: right;
+  margin-top: 10px;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}

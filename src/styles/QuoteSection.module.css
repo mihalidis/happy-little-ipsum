@@ -1,0 +1,43 @@
+.quoteContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quoteCardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.mainButton {
+    background: var(--color-sunrise-5);
+    color: var(--color-sunrise-1);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.6s ease;
+    margin-top: 2rem;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    transform: translateY(0);
+    transition: all 0.3s ease, transform 0.8s ease;
+}
+
+.mainButton:hover {
+    transform: translateY(-2px);
+}
+
+.slideDown {
+    transform: translateY(20px);
+}
+
+.slideDown:hover {
+    transform: translateY(17px);
+}

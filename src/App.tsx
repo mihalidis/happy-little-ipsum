@@ -1,10 +1,12 @@
 import './App.css'
-import Hero from './components/Hero'
+import MainContent from './components/Header'
+import QuoteSection from './components/QuoteSection'
 
 function App() {
   return (
     <>
-      <Hero />
+      <MainContent />
+      <QuoteSection />
     </>
   )
 }
