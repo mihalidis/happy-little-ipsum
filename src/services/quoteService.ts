@@ -9,11 +9,17 @@ export interface Quote {
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 
 export const quoteService = {
-  async getRandomQuote(): Promise<Quote> {
+  async getRandomQuote(excludeId?: number): Promise<Quote> {
     await delay(300)
-    
-    const randomIndex = Math.floor(Math.random() * quotesData.quotes.length)
-    return quotesData.quotes[randomIndex]
+    const availableQuotes = excludeId !== undefined
+      ? quotesData.quotes.filter((q: Quote) => q.id !== excludeId)
+      : quotesData.quotes;
+    // Eğer sadece bir quote kaldıysa, onu döndür
+    if (availableQuotes.length === 0) {
+      return quotesData.quotes[0];
+    }
+    const randomIndex = Math.floor(Math.random() * availableQuotes.length)
+    return availableQuotes[randomIndex]
   },
 
   async getRandomQuotes(count: number): Promise<Quote[]> {

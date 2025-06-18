@@ -16,7 +16,7 @@ export default function QuoteSection() {
     
     setIsLoading(true)
     try {
-      const quote = await quoteService.getRandomQuote()
+      const quote = await quoteService.getRandomQuote(currentQuote ? currentQuote.id : undefined)
       setCurrentQuote(quote)
     } catch (error) {
       console.error('Error fetching quote:', error)
@@ -29,7 +29,7 @@ export default function QuoteSection() {
     <div className={styles.quoteContainer}>
       {
         showQuotes && currentQuote ? <div className={styles.quoteCardContainer}>
-          <QuoteCard quote={currentQuote} />
+          <QuoteCard quote={currentQuote} key={currentQuote.id} />
         </div> : null
       }
       <button 
