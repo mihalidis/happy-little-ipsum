@@ -21,7 +21,7 @@ A calming and creative lorem ipsum generator powered by the joyful wisdom of Bob
 
 ## 🚀 Usage
 
-Visit [happylittleipsum]() or clone the project and run it locally:
+Visit [happylittleipsum](https://happy-little-ipsum.vercel.app/) or clone the project and run it locally:
 
 ```bash
 git clone https://github.com/mihalidis/happy-little-ipsum.git
