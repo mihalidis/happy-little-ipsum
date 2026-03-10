@@ -1,38 +1,75 @@
-.quoteCard {
-  max-width: 340px;
-  background: var(---color-sap-green);
-  border-radius: 14px;
-  padding: 20px;
-  margin: 32px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  animation: slideUp 0.8s ease-out forwards;
-  opacity: 0;
+.card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: slideUp 0.35s ease-out forwards;
+  border-left: 4px solid var(--forest-muted);
+  transition: box-shadow 0.2s ease;
 }
 
-.quoteText {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: var(--color-earth-brown);
-  font-family: 'Lora', serif;
-  line-height: 1.4;
+.card:hover {
+  box-shadow: 0 6px 28px rgba(62, 42, 20, 0.15);
 }
 
-.quoteAuthor {
-  font-size: 1rem;
-  color: var(--color-earth-brown);
+.quoteMode {
+  border-left-color: var(--sunset);
+  background: linear-gradient(135deg, var(--white) 0%, var(--cream) 100%);
+}
+
+.text {
   font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  color: var(--earth);
+  line-height: 1.75;
+}
+
+.quoteMode .text {
   font-style: italic;
-  text-align: right;
-  margin-top: 10px;
+  font-size: 1.1rem;
+  color: var(--earth-mid);
+}
+
+.copyBtn {
+  align-self: flex-end;
+  background: transparent;
+  border: 1.5px solid var(--cream-dark);
+  color: var(--earth-warm);
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.copyBtn:hover {
+  background: var(--cream-dark);
+  border-color: var(--earth-warm);
+  color: var(--earth);
+}
+
+.copied {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--cream);
+}
+
+.copied:hover {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--cream);
 }
 
 @keyframes slideUp {
-  0% {
+  from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(12px);
   }
-  100% {
+  to {
     opacity: 1;
-    transform: translateY(-2px);
+    transform: translateY(0);
   }
 }

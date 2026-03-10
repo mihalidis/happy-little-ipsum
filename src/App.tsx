@@ -1,11 +1,13 @@
 import './App.css'
-import MainContent from './components/Header'
+import Background from './components/Background'
+import Header from './components/Header'
 import QuoteSection from './components/QuoteSection'
 
 function App() {
   return (
     <>
-      <MainContent />
+      <Background />
+      <Header />
       <QuoteSection />
     </>
   )

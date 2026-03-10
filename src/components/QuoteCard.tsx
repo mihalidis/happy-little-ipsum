@@ -1,15 +1,30 @@
+import { useState } from 'react'
 import styles from '../styles/QuoteCard.module.css'
-import type { Quote } from '../services/quoteService'
 
 interface QuoteCardProps {
-  quote: Quote
+  text: string
+  mode: 'paragraphs' | 'quotes'
 }
 
-export default function QuoteCard({ quote }: QuoteCardProps) {
+export default function QuoteCard({ text, mode }: QuoteCardProps) {
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(text)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   return (
-    <div className={styles.quoteCard}>
-      <p className={styles.quoteText}>"{quote.text}"</p>
-      <p className={styles.quoteAuthor}>— {quote.author}</p>
+    <div className={`${styles.card} ${mode === 'quotes' ? styles.quoteMode : ''}`}>
+      <p className={styles.text}>{text}</p>
+      <button
+        className={`${styles.copyBtn} ${copied ? styles.copied : ''}`}
+        onClick={handleCopy}
+        aria-label="Copy to clipboard"
+      >
+        {copied ? '✓ Copied' : 'Copy'}
+      </button>
     </div>
   )
 }

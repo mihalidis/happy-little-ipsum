@@ -1,21 +1,41 @@
 :root {
-  --color-sap-green: #6B8E23;
-  --color-sky-blue: #87CEEB;
-  --color-earth-brown: #8B4513;
-  --color-brush-white: #fefefe;
+  /* Nature palette inspired by Bob Ross paintings */
+  --forest: #3D6B47;
+  --forest-light: #5A9467;
+  --forest-muted: #7BAE87;
 
-  --color-sunrise-1: #FFE5B4;  /* Light Peach */
-  --color-sunrise-2: #FFDAB9;  /* Light Salmon */
-  --color-sunrise-3: #FFC0CB;  /* Light Pink */
-  --color-sunrise-4: #FFB6C1;  /* Light Pink */
-  --color-sunrise-5: #FFA07A;  /* Light Salmon */
+  --sky: #6AAED6;
+  --sky-light: #A8D4F0;
+  --sky-pale: #DFF0FA;
 
-  --gradient-sunrise: linear-gradient(
-    135deg,
-    var(--color-sunrise-1),
-    var(--color-sunrise-2),
-    var(--color-sunrise-3),
-    var(--color-sunrise-4),
-    var(--color-sunrise-5)
+  --sunset: #D9784A;
+  --sunset-light: #F0A070;
+  --peach: #F5C99A;
+
+  --earth: #3E2A14;
+  --earth-mid: #7A4E2D;
+  --earth-warm: #B07D52;
+
+  --cream: #FDF6EC;
+  --cream-dark: #F5E8D2;
+  --mist: #F0F5F9;
+  --white: #FFFFFF;
+
+  /* Gradients */
+  --gradient-sky: linear-gradient(
+    160deg,
+    #DFF0FA 0%,
+    #EEF6FC 30%,
+    #FDF6EC 70%,
+    #F5E8D2 100%
   );
-} 
+
+  --shadow-soft: 0 2px 12px rgba(61, 107, 71, 0.12);
+  --shadow-card: 0 4px 24px rgba(62, 42, 20, 0.10);
+  --shadow-button: 0 4px 14px rgba(61, 107, 71, 0.30);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+}
